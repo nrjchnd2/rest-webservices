@@ -1,17 +1,20 @@
 package com.neeraj.rest.webservices.restwebservices.User;
 
 import java.util.Date;
-
-import javax.validation.constraints.Min;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+@ApiModel(description="Description about the user model")
 public class User {
 
 	private Integer id;
 	@Size(min=2,message="Name should be atleast 2 characters long")
+	@ApiModelProperty(notes="Name should be atleast 2 chars long")
 	private String name;
 	@Past
+	@ApiModelProperty(notes="Date of Birth should always be in the Past")
 	private Date dob;
 	
 	
