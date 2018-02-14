@@ -2,8 +2,10 @@ package com.neeraj.rest.webservices.restwebservices;
 
 import java.util.Locale;
 
+import org.h2.server.web.WebServlet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.MessageSourceSupport;
 import org.springframework.context.support.ResourceBundleMessageSource;
@@ -30,4 +32,5 @@ public class RestWebservicesApplication {
 		messageSource.setBasename("messages");
 		return messageSource;
 	}
+	
 }
